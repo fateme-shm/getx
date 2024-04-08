@@ -88,51 +88,60 @@
     - [نحوه مشارکت](#how-to-contribute)
     - [مقالات و ویدئوها](#articles-and-videos)
 
-# درباره 
+# درباره
 
-- GetX یک راه حل فوق العاده سبک و قدرتمند برای فلاتر است. مدیریت حالت با کارایی بالا، تزریق وابستگی هوشمند و مدیریت مسیر را به سرعت و عملی ترکیب می کند.
+- GetX یک راه حل فوق العاده سبک و قدرتمند برای فلاتر است. مدیریت حالت با کارایی بالا، تزریق وابستگی
+  هوشمند و مدیریت مسیر را به سرعت و عملی ترکیب می کند.
 
-- GetX دارای 3 اصل اساسی است. این بدان معنی است که این موارد برای همه منابع موجود در کتابخانه اولویت دارند: **بهره وری، عملکرد و سازماندهی.**
+- GetX دارای 3 اصل اساسی است. این بدان معنی است که این موارد برای همه منابع موجود در کتابخانه اولویت
+  دارند: **بهره وری، کارایی و سازماندهی.**
 
-    - **کارایی:** GetX بر عملکرد و حداقل مصرف منابع متمرکز است و از Streams یا ChangeNotifier استفاده نمی کند.
+    - **کارایی:** GetX بر عملکرد و حداقل مصرف منابع متمرکز است و از Streams یا ChangeNotifier
+      استفاده نمی کند.
 
-    - **بهره وری:** GetX از یک نحو آسان و دلپذیر استفاده می کند. مهم نیست که چه کاری می خواهید انجام دهید، همیشه یک راه آسان تر با GetX وجود دارد. این باعث صرفه جویی در ساعت ها در توسعه می شود و حداکثر عملکردی را که برنامه شما می تواند ارائه دهد ارائه می دهد.
+    - **بهره وری:** GetX از یک نحو آسان و دلپذیر استفاده می کند. مهم نیست که چه کاری می خواهید انجام
+      دهید، همیشه یک راه آسان تر با GetX وجود دارد. این باعث صرفه جویی در ساعت ها در توسعه می شود و
+      حداکثر عملکردی را که برنامه شما می تواند ارائه دهد ارائه می دهد.
 
-      به طور کلی، توسعه دهنده باید نگران حذف کنترلرها از حافظه باشد. در GetX این کار ضروری نیست زیرا منابع زمانی که به طور پیش فرض استفاده نمی شوند از حافظه حذف می شوند. اگر می خواهید آن را در حافظه نگه دارید، باید به صراحت "permanent: true" را در وابستگی خود اعلام کنید. به این ترتیب، علاوه بر صرفه جویی در زمان، کمتر در معرض خطر وابستگی غیر ضروری به حافظه قرار خواهید داشت. بارگذاری وابستگی نیز به طور پیش فرض lazy است.
+      به طور کلی، توسعه دهنده باید نگران حذف کنترلرها از حافظه باشد. در GetX این کار ضروری نیست زیرا
+      منابع زمانی که به طور پیش فرض استفاده نمی شوند از حافظه حذف می شوند. اگر می خواهید آن را در
+      حافظه نگه دارید، باید به صراحت "permanent: true" را در وابستگی خود اعلام کنید. به این ترتیب،
+      علاوه بر صرفه جویی در زمان، کمتر در معرض خطر وابستگی غیر ضروری به حافظه قرار خواهید داشت.
+      بارگذاری وابستگی نیز به طور پیش فرض lazy است.
 
-    - **سازماندهی:** GetX امکان جداسازی کامل نما، منطق ارائه، منطق تجاری، تزریق وابستگی و ناوبری را فراهم می کند. برای پیمایش بین مسیرها نیازی به زمینه ندارید، بنابراین برای این کار به درخت ویجت (تجسم) وابسته نیستید. برای دسترسی به کنترل‌کننده‌ها/بلاک‌های خود از طریق یک ویجت ارثی نیازی به زمینه ندارید، بنابراین منطق ارائه و منطق تجاری خود را کاملاً از لایه تجسم جدا می‌کنید. شما نیازی به تزریق کلاس های Controller/Models/Blocks به درخت ویجت خود از طریق `چند ارائه دهنده`s ندارید. برای این کار، GetX از ویژگی تزریق وابستگی خود استفاده می کند و DI را به طور کامل از دید خود جدا می کند.
+    - **سازماندهی:** GetX امکان جداسازی کامل نما، منطق ارائه، منطق تجاری، تزریق وابستگی و ناوبری را
+      فراهم می کند. برای پیمایش بین مسیرها نیازی به زمینه ندارید، بنابراین برای این کار به درخت
+      ویجت (تجسم) وابسته نیستید. برای دسترسی به کنترل‌کننده‌ها/بلاک‌های خود از طریق یک ویجت ارثی
+      نیازی به زمینه ندارید، بنابراین منطق ارائه و منطق تجاری خود را کاملاً از لایه تجسم جدا
+      می‌کنید. شما نیازی به تزریق کلاس های Controller/Models/Blocks به درخت ویجت خود از طریق **چند
+      ارائه دهنده** ندارید. برای این کار، GetX از ویژگی تزریق وابستگی خود استفاده می کند و DI را به
+      طور کامل از دید خود جدا می کند.
 
-      With GetX you know where to find each feature of your application, having clean code by
-      default. In addition to making maintenance easy, this makes the sharing of modules something
-      that until then in Flutter was unthinkable, something totally possible.
-      BLoC was a starting point for organizing code in Flutter, it separates business logic from
-      visualization. GetX is a natural evolution of this, not only separating the business logic but
-      the presentation logic. Bonus injection of dependencies and routes are also decoupled, and the
-      data layer is out of it all. You know where everything is, and all of this in an easier way
-      than building a hello world.
-      GetX is the easiest, practical, and scalable way to build high-performance applications with
-      the Flutter SDK. It has a large ecosystem around it that works perfectly together, it's easy
-      for beginners, and it's accurate for experts. It is secure, stable, up-to-date, and offers a
-      huge range of APIs built-in that are not present in the default Flutter SDK.
+      با GetX می‌دانید که هر یک از ویژگی‌های برنامه‌تان را کجا پیدا کنید، به‌طور پیش‌فرض کد تمیزی
+      دارید.
+      GetX ساده‌ترین، کاربردی‌ترین و مقیاس ‌پذیرترین راه برای ساخت برنامه‌های کاربردی با کارایی بالا
+      با فلاتر SDK است. این یک اکوسیستم بزرگ در اطراف خود دارد که کاملاً با هم کار می کند، برای
+      مبتدیان آسان است و برای متخصصان دقیق است. ایمن، پایدار، به‌روز است و طیف وسیعی از وب سرویس های
+      داخلی را ارائه می‌کند که در فلاتر SDK پیش‌فرض وجود ندارند.
 
-- GetX is not bloated. It has a multitude of features that allow you to start programming without
-  worrying about anything, but each of these features are in separate containers and are only
-  started after use. If you only use State Management, only State Management will be compiled. If
-  you only use routes, nothing from the state management will be compiled.
+- دارای بسیاری از ویژگی ها است که به شما امکان می دهد بدون نگرانی از چیزی شروع به برنامه نویسی کنید،
+  اما هر یک از این ویژگی ها در ظرف های جداگانه ای هستند و تنها پس از استفاده شروع می شوند. اگر فقط
+  از مدیریت حالت استفاده کنید، فقط مدیریت حالت کامپایل می شود. اگر فقط از مسیرها استفاده کنید، چیزی
+  از مدیریت حالت نخواهد شد.
 
-- GetX has a huge ecosystem, a large community, a large number of collaborators, and will be
-  maintained as long as the Flutter exists. GetX too is capable of running with the same code on
-  Android, iOS, Web, Mac, Linux, Windows, and on your server.
-  **It is possible to fully reuse your code made on the frontend on your backend
-  with [Get Server](https://github.com/jonataslaw/get_server)**.
+- GetX دارای یک اکوسیستم بزرگ، یک جامعه بزرگ، تعداد زیادی از همکاران است و تا زمانی که فلاتر وجود
+  دارد حفظ خواهد شد. GetX نیز قادر است با همان کد روی اندروید، iOS، وب، مک، لینوکس، ویندوز و سرور
+  شما اجرا شود.
+  **این امکان وجود دارد که به طور کامل از کدهای ساخته شده در فرانت اند در باطن خود استفاده مجدد کنید
+  با [سرور Get](https://github.com/jonataslaw/get_server)**.
 
-**In addition, the entire development process can be completely automated, both on the server and on
-the front end with [Get CLI](https://github.com/jonataslaw/get_cli)**.
+**علاوه بر این، کل فرآیند توسعه را می توان به طور کامل خودکار، هم در سرور و هم در فرانت اند
+با [Get CLI](https://github.com/jonataslaw/get_cli)**.
 
-**In addition, to further increase your productivity, we have the
-[extension to VSCode](https://marketplace.visualstudio.com/items?itemName=get-snippets.get-snippets)
-and
-the [extension to Android Studio/Intellij](https://plugins.jetbrains.com/plugin/14975-getx-snippets)
+**علاوه بر این، برای افزایش بیشتر بهره وری شما، ما باید
+[افزونه برای VSCode](https://marketplace.visualstudio.com/items?itemName=get-snippets.get-snippets)
+و
+the [افزونه برای Android Studio/Intellij](https://plugins.jetbrains.com/plugin/14975-getx-snippets)
 **
 
 # Installing
@@ -1043,7 +1052,8 @@ false.obs,
 
 var message = 'Hello world'.obs;
 print
-( 'Message "$message" has Type 
+( 'Message "
+$message" has Type 
 ${
 message
     .
