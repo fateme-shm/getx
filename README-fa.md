@@ -98,20 +98,9 @@
 
     - **بهره وری:** GetX از یک نحو آسان و دلپذیر استفاده می کند. مهم نیست که چه کاری می خواهید انجام دهید، همیشه یک راه آسان تر با GetX وجود دارد. این باعث صرفه جویی در ساعت ها در توسعه می شود و حداکثر عملکردی را که برنامه شما می تواند ارائه دهد ارائه می دهد.
 
-      Generally, the developer should be concerned with removing controllers from memory. With GetX
-      this is not necessary because resources are removed from memory when they are not used by
-      default. If you want to keep it in memory, you must explicitly declare "permanent: true" in
-      your dependency. That way, in addition to saving time, you are less at risk of having
-      unnecessary dependencies on memory. Dependency loading is also lazy by default.
+      به طور کلی، توسعه دهنده باید نگران حذف کنترلرها از حافظه باشد. در GetX این کار ضروری نیست زیرا منابع زمانی که به طور پیش فرض استفاده نمی شوند از حافظه حذف می شوند. اگر می خواهید آن را در حافظه نگه دارید، باید به صراحت "permanent: true" را در وابستگی خود اعلام کنید. به این ترتیب، علاوه بر صرفه جویی در زمان، کمتر در معرض خطر وابستگی غیر ضروری به حافظه قرار خواهید داشت. بارگذاری وابستگی نیز به طور پیش فرض lazy است.
 
-    - **سازماندهی:** GetX allows the total decoupling of the View, presentation logic, business
-      logic, dependency injection, and navigation. You do not need context to navigate between
-      routes, so you are not dependent on the widget tree (visualization) for this. You don't need
-      context to access your controllers/blocs through an inheritedWidget, so you completely
-      decouple your presentation logic and business logic from your visualization layer. You do not
-      need to inject your Controllers/Models/Blocs classes into your widget tree
-      through `MultiProvider`s. For this, GetX uses its own dependency injection feature, decoupling
-      the DI from its view completely.
+    - **سازماندهی:** GetX امکان جداسازی کامل نما، منطق ارائه، منطق تجاری، تزریق وابستگی و ناوبری را فراهم می کند. برای پیمایش بین مسیرها نیازی به زمینه ندارید، بنابراین برای این کار به درخت ویجت (تجسم) وابسته نیستید. برای دسترسی به کنترل‌کننده‌ها/بلاک‌های خود از طریق یک ویجت ارثی نیازی به زمینه ندارید، بنابراین منطق ارائه و منطق تجاری خود را کاملاً از لایه تجسم جدا می‌کنید. شما نیازی به تزریق کلاس های Controller/Models/Blocks به درخت ویجت خود از طریق `چند ارائه دهنده`s ندارید. برای این کار، GetX از ویژگی تزریق وابستگی خود استفاده می کند و DI را به طور کامل از دید خود جدا می کند.
 
       With GetX you know where to find each feature of your application, having clean code by
       default. In addition to making maintenance easy, this makes the sharing of modules something
