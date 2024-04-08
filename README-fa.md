@@ -79,7 +79,7 @@
         - [چشم انداز Get](#getview)
         - [نمای واکنشگرا Get](#getresponsiveview)
             - [نحوه استفاده از آن](#how-to-use-it)
-        - [ویچت Get](#getwidget)
+        - [ویجت Get](#getwidget)
         - [سرویس Get](#getxservice)
 - [تغییرات از نسخه 2.0](#breaking-changes-from-20)
 - [چرا Getx؟](#why-getx)
@@ -88,7 +88,7 @@
     - [نحوه مشارکت](#how-to-contribute)
     - [مقالات و ویدئوها](#articles-and-videos)
 
-# About Get
+# درباره 
 
 - GetX is an extra-light and powerful solution for Flutter. It combines high-performance state
   management, intelligent dependency injection, and route management quickly and practically.
