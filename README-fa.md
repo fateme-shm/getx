@@ -43,7 +43,7 @@
 - [درباره GetX](#about-get)
 - [نصب](#installing)
 - [برنامه شمارنده با GetX](#counter-app-with-getx)
-- [The Three pillars](#the-three-pillars)
+- [ارکان](#the-three-pillars)
     - [مدیریت حالت ها](#state-management)
         - [مدیریت حالت واکنش پذیر](#reactive-state-manager)
         - [اطلاعات بیشتر درباره مدیریت حالت ها](#more-details-about-state-management)
@@ -52,41 +52,41 @@
     - [مدیریت وابستگی ها](#dependency-management)
         - [اطلاعات بیشتر درباره مدیریت وابستگی ها](#more-details-about-dependency-management)
 - [کاربردها](#utils)
-    - [Internationalization](#internationalization)
-        - [Translations](#translations)
-            - [Using translations](#using-translations)
-        - [Locales](#locales)
-            - [Change locale](#change-locale)
-            - [System locale](#system-locale)
-    - [Change Theme](#change-theme)
-    - [GetConnect](#getconnect)
-        - [Default configuration](#default-configuration)
-        - [Custom configuration](#custom-configuration)
-    - [GetPage Middleware](#getpage-middleware)
-        - [Priority](#priority)
-        - [Redirect](#redirect)
-        - [onPageCalled](#onpagecalled)
-        - [OnBindingsStart](#onbindingsstart)
-        - [OnPageBuildStart](#onpagebuildstart)
-        - [OnPageBuilt](#onpagebuilt)
-        - [OnPageDispose](#onpagedispose)
-    - [Other Advanced APIs](#other-advanced-apis)
-        - [Optional Global Settings and Manual configurations](#optional-global-settings-and-manual-configurations)
-        - [Local State Widgets](#local-state-widgets)
-            - [ValueBuilder](#valuebuilder)
-            - [ObxValue](#obxvalue)
-    - [Useful tips](#useful-tips)
-        - [GetView](#getview)
-        - [GetResponsiveView](#getresponsiveview)
-            - [How to use it](#how-to-use-it)
-        - [GetWidget](#getwidget)
-        - [GetxService](#getxservice)
-- [Breaking changes from 2.0](#breaking-changes-from-20)
-- [Why Getx?](#why-getx)
-- [Community](#community)
-    - [Community channels](#community-channels)
-    - [How to contribute](#how-to-contribute)
-    - [Articles and videos](#articles-and-videos)
+    - [چند زبانه](#internationalization)
+        - [ترجمه ها](#translations)
+            - [استفاده از ترجمه](#using-translations)
+        - [(منطقه زمان - زبان) موقعیت](#locales)
+            - [تغییر موقعیت](#change-locale)
+            - [موقعیت - پیشفرض سیستم](#system-locale)
+    - [تغییر مود (تم تیره - روشن)](#change-theme)
+    - [اتصال به وب سرویس ها](#getconnect)
+        - [پیکربندی پیشفرض](#default-configuration)
+        - [پیکربندی سفارشی](#custom-configuration)
+    - [میان افزار GetPage](#getpage-middleware)
+        - [اولویت بندی](#priority)
+        - [هدایت کردن](#redirect)
+        - [در زمان فراخوانی صفحه](#onpagecalled)
+        - [در زمان اتصال صفحه](#onbindingsstart)
+        - [در زمان شروع ساخت صفحه](#onpagebuildstart)
+        - [در زمان ساخت صفحه](#onpagebuilt)
+        - [در زمان از بین رفتن صفحه](#onpagedispose)
+    - [سایر وب سرویس های پیشرفته](#other-advanced-apis)
+        - [تنظیمات عمومی اختیاری و تنظیمات دستی](#optional-global-settings-and-manual-configurations)
+        - [ویجت های محلی حالت](#local-state-widgets)
+            - [استفاده از ValueBuilder](#valuebuilder)
+            - [استفاداه از Obx](#obxvalue)
+    - [نکات مفید](#useful-tips)
+        - [چشم انداز Get](#getview)
+        - [نمای واکنشگرا Get](#getresponsiveview)
+            - [نحوه استفاده از آن](#how-to-use-it)
+        - [ویچت Get](#getwidget)
+        - [سرویس Get](#getxservice)
+- [تغییرات از نسخه 2.0](#breaking-changes-from-20)
+- [چرا Getx؟](#why-getx)
+- [انجمن](#community)
+    - [کانال های انجمن](#community-channels)
+    - [نحوه مشارکت](#how-to-contribute)
+    - [مقالات و ویدئوها](#articles-and-videos)
 
 # About Get
 
@@ -1059,11 +1059,10 @@ false.obs,
 
 var message = 'Hello world'.obs;
 print
-( 'Message "
-$message" has Type 
+( 'Message "$message" has Type 
 ${
 message
-.
+    .
 runtimeType
 }
 '
@@ -1081,8 +1080,7 @@ The most "used way" is `.value`, but, did you know that you can also use...
 final name = 'GetX'.obs;
 // only "updates" the stream, if the value is different from the current one.
 name.value = '
-Hey
-';
+Hey';
 
 // All Rx properties are "callable" and returns the new value.
 // but this approach does not accepts `null`, the UI will not rebuild.
