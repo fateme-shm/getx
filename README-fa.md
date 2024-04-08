@@ -90,18 +90,13 @@
 
 # درباره 
 
-- GetX is an extra-light and powerful solution for Flutter. It combines high-performance state
-  management, intelligent dependency injection, and route management quickly and practically.
+- GetX یک راه حل فوق العاده سبک و قدرتمند برای فلاتر است. مدیریت حالت با کارایی بالا، تزریق وابستگی هوشمند و مدیریت مسیر را به سرعت و عملی ترکیب می کند.
 
-- GetX has 3 basic principles. This means that these are the priority for all resources in the
-  library: **PRODUCTIVITY, PERFORMANCE AND ORGANIZATION.**
+- GetX دارای 3 اصل اساسی است. این بدان معنی است که این موارد برای همه منابع موجود در کتابخانه اولویت دارند: **بهره وری، عملکرد و سازماندهی.**
 
-    - **PERFORMANCE:** GetX is focused on performance and minimum consumption of resources. GetX
-      does not use Streams or ChangeNotifier.
+    - **کارایی:** GetX بر عملکرد و حداقل مصرف منابع متمرکز است و از Streams یا ChangeNotifier استفاده نمی کند.
 
-    - **PRODUCTIVITY:** GetX uses an easy and pleasant syntax. No matter what you want to do, there
-      is always an easier way with GetX. It will save hours of development and will provide the
-      maximum performance your application can deliver.
+    - **بهره وری:** GetX از یک نحو آسان و دلپذیر استفاده می کند. مهم نیست که چه کاری می خواهید انجام دهید، همیشه یک راه آسان تر با GetX وجود دارد. این باعث صرفه جویی در ساعت ها در توسعه می شود و حداکثر عملکردی را که برنامه شما می تواند ارائه دهد ارائه می دهد.
 
       Generally, the developer should be concerned with removing controllers from memory. With GetX
       this is not necessary because resources are removed from memory when they are not used by
@@ -109,7 +104,7 @@
       your dependency. That way, in addition to saving time, you are less at risk of having
       unnecessary dependencies on memory. Dependency loading is also lazy by default.
 
-    - **ORGANIZATION:** GetX allows the total decoupling of the View, presentation logic, business
+    - **سازماندهی:** GetX allows the total decoupling of the View, presentation logic, business
       logic, dependency injection, and navigation. You do not need context to navigate between
       routes, so you are not dependent on the widget tree (visualization) for this. You don't need
       context to access your controllers/blocs through an inheritedWidget, so you completely
